@@ -1,5 +1,6 @@
 import Head from "next/head";
-const PageHeader = () => {
+const PageHeader = (props) => {
+  const { title } = props;
   return (
     <>
       <Head>
@@ -10,6 +11,8 @@ const PageHeader = () => {
         <link rel="stylesheet" href="../src/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/revel.css" />
         <link rel="stylesheet" href="assets/css/responsive.css" />
+      <title>{title}</title>
+
       </Head>
       <script src="assets/js/jquery.slim.min.js"></script>
       <script src="assets/js/bootstrap.bundle.min.js"></script>

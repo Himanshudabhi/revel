@@ -3,8 +3,13 @@ import { searchimg, BarsImg } from "@/src/assets/img/icons";
 import Image from "next/image";
 import Sidebar from "../sidebar/sidebar";
 import { useState } from "react";
+import { useRouter } from "next/router";
+import { COMPONENT_TITLE } from "@/src/constant/titles";
 
-const Header = () => {
+const Header = (props) => {
+  const { title } = props;
+  const router = useRouter();
+
     const [show, setShow] = useState(false);
     const [search, setSearch] = useState(false);
 
@@ -29,6 +34,7 @@ const Header = () => {
                                 class="img-fluid"
                                 width="115"
                             />
+                            
                         </a>
                         <div id="top_nav" class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto align-items-center">
@@ -42,6 +48,7 @@ const Header = () => {
                                             className={`form-control ${search ? "show" : ""}`}
                                             placeholder="Search"
                                         />
+                                           <h2>{title}</h2>
                                         <div class="toggle-search " onClick={searchToggle}>
                                             <Image src={searchimg} alt="Search" class="img-fluid" />
                                         </div>
@@ -72,13 +79,15 @@ const Header = () => {
                             >
                                 <Image src={BarsImg} alt="Toggle Sidebar" class="img-fluid" />
                             </a>
-                            <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            
+                            <li class="breadcrumb-item">{title}</li>
+                            <li class="breadcrumb-item active">{COMPONENT_TITLE[router.pathname]}</li>
                         </ol>
                     </div>
                 </nav>
             </div>
-            <Sidebar show={show} />
+            
+            <Sidebar show={show} /> 
         </>
     );
 };

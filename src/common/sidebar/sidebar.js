@@ -10,8 +10,14 @@ import {
     AnalyticsIcon,
     ConfigurationIcon,
 } from "@/src/assets/img/icons";
+import { useState } from "react";
 const Sidebar = (props) => {
     const { show } = props;
+    const [add ,setadd] = useState(false)
+
+    const showToggl = ()=>{
+        setadd(!add)
+    }
     return (
         <>
             <aside
@@ -203,58 +209,30 @@ const Sidebar = (props) => {
                             </svg>
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <a
-                            className="nav-link d-flex justify-content-between align-items-center"
-                            href="javascript:void(0)"
-                            data-toggle="collapse"
-                            data-target="#dropdown"
-                        >
-                            <div>
-                                <Image
-                                    src={ConfigurationIcon}
-                                    alt="Configuration"
-                                    className="img-fluid"
-                                />
-                                <span>Configuration</span>
-                            </div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="6.571"
-                                height="12"
-                                viewBox="0 0 6.571 12"
-                            >
-                                <path
-                                    id="icons8_expand_arrow"
-                                    d="M14.025,12.168,9,17.192,3.976,12.168a.571.571,0,1,0-.808.808L8.6,18.4a.571.571,0,0,0,.808,0l5.429-5.429a.571.571,0,0,0-.808-.808Z"
-                                    transform="translate(-12 15) rotate(-90)"
-                                    fill="#A3A3A3"
-                                />
-                            </svg>
-                        </a>
-                        <div
-                            id="dropdown"
-                            className="collapse navbar-collapse has-dropdown"
-                        >
-                            <ul className="navbar-nav mr-auto">
-                                <li className="nav-item">
-                                    <a className="nav-link" href="javascript:void(0)">
-                                        User
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="javascript:void(0)">
-                                        Role
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="javascript:void(0)">
-                                        Tenet
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li class="nav-item" >
+                    <a class="nav-link d-flex justify-content-between align-items-center " href="javascript:void(0)" data-toggle="collapse" data-target="#dropdown" onClick={showToggl}>
+                        <div >
+                            <Image src={ConfigurationIcon} alt="Configuration" class="img-fluid"  />
+                            <span >Configuration</span>
+                        </div> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6.571" height="12" viewBox="0 0 6.571 12">
+                            <path id="icons8_expand_arrow" d="M14.025,12.168,9,17.192,3.976,12.168a.571.571,0,1,0-.808.808L8.6,18.4a.571.571,0,0,0,.808,0l5.429-5.429a.571.571,0,0,0-.808-.808Z" transform="translate(-12 15) rotate(-90)" fill="#a3a3a3"/>
+                        </svg>
+                    </a>
+                    <div id="dropdown" class={`collapse navbar-collapse has-dropdown ${add ? "show" : ""}`}>
+                        <ul class="navbar-nav mr-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">User</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">Role</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">Tenet</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 </ul>
                 <ul className="navbar-nav navbar-nav-bottom">
                     <li className="nav-item">
