@@ -229,7 +229,7 @@ const data = [{
 
 
 const ManageTenants = (props) => {
-    const  { title } = props
+    const { title } = props
     const [visibal, setvisible] = useState(7)
 
     const showmoreitem = () => {
@@ -237,46 +237,46 @@ const ManageTenants = (props) => {
     }
     return (
         <>
-            <main class="main-content" id="main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="login-form  p-0 mt-5">
-                                <div class="col-9 mx-auto ">
-                                    <div class="text-center mb-5">
-                                        <h3 class="font-36 mb-3">Manage the Tenants </h3>
-                                        <p class="font-16 ">
+            <main className="main-content" id="main">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="login-form  p-0 mt-5">
+                                <div className="col-9 mx-auto ">
+                                    <div className="text-center mb-5">
+                                        <h3 className="font-36 mb-3">Manage the Tenants </h3>
+                                        <p className="font-16 ">
                                             You can add, edit and delete Tenant anytime.
                                         </p>
                                     </div>
-                                    <div class="row data-lake-cards tenants ">
+                                    <div className="row data-lake-cards tenants ">
                                         {
                                             data.slice(0, visibal).map((ins, index) => {
                                                 return (<>
-                                                    <div class="col-12 col-md-3 mb-4 ">
-                                                        <div class="card text text-center mb-0">
-                                                            <div class="icon">
-                                                                <Image src={ins.img} alt="Revel" class="img-fluid mx-auto"
+                                                    <div className="col-12 col-md-3 mb-4 ">
+                                                        <div className="card text text-center mb-0">
+                                                            <div className="icon">
+                                                                <Image src={ins.img} alt="Revel" className="img-fluid mx-auto"
                                                                     width="140" height="100" />
                                                             </div>
                                                             {/* Revel */}
                                                             {ins.name}
                                                             {title}
-                                                            <div class="actions">
-                                                                <ul class="list-unstyled d-flex flex-row mb-0 justify-content-center">
+                                                            <div className="actions">
+                                                                <ul className="list-unstyled d-flex flex-row mb-0 justify-content-center">
                                                                     <li>
                                                                         <a href="javascript:void(0)">
-                                                                            <i class="r-icon r-icon-info-outline"></i>
+                                                                            <i className="r-icon r-icon-info-outline"></i>
                                                                         </a>
                                                                     </li>
                                                                     <li>
                                                                         <a href="javascript:void(0)">
-                                                                            <i class="r-icon r-icon-pencil"></i>
+                                                                            <i className="r-icon r-icon-pencil"></i>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="javascript:void(0)" class="text-danger">
-                                                                            <i class="r-icon r-icon-delete"></i>
+                                                                        <a href="javascript:void(0)" className="text-danger">
+                                                                            <i className="r-icon r-icon-delete"></i>
                                                                         </a>
                                                                     </li>
                                                                 </ul>
@@ -286,11 +286,11 @@ const ManageTenants = (props) => {
                                                 </>)
                                             })
                                         }
-                                        <div class="col-12 col-md-3">
-                                            <label for="logo" class="upload-box card">
-                                                <div class="inner-content">
-                                                    <div class="icon-box">
-                                                        <i class="r-icon r-icon-plus"></i>
+                                        <div className="col-12 col-md-3">
+                                            <label for="logo" className="upload-box card">
+                                                <div className="inner-content">
+                                                    <div className="icon-box">
+                                                        <i className="r-icon r-icon-plus"></i>
                                                     </div>
                                                     <span>
                                                         Add Tenant
@@ -299,9 +299,10 @@ const ManageTenants = (props) => {
                                             </label>
                                         </div>
                                     </div>
-                                    <button className="btn btn-success " onClick={showmoreitem}>Lode More</button>
-                                    <div class="text-center my-4">
-                                        <a href="javascript:void(0)" class="btn btn-primary btn-lg min-width-150">{BUTTON_LABEL.SAVE}</a>
+                                    
+                                    <div className="text-center my-4">
+                                        {/* <a href="javascript:void(0)" className="btn btn-primary btn-lg min-width-150">{BUTTON_LABEL.SAVE}</a> */}
+                                        <button className="btn btn-success " onClick={showmoreitem}>Lode More</button>
                                     </div>
                                 </div>
                             </div>

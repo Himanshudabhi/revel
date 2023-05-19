@@ -1,12 +1,13 @@
 import PageHeader from "@/src/config/PageHeader"
+import { HEADER_TITLE } from "@/src/constant/titles"
 import Login from "@/src/container/login/login"
 
-const Home = ()=>{
-  return(
+const Home = () => {
+  return (
     <>
-    <PageHeader/>
-    <Login/>
-    
+      <PageHeader title={HEADER_TITLE.SINGIN} />
+      <Login />
+
     </>
   )
 }
