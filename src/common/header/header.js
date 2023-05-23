@@ -5,6 +5,8 @@ import Sidebar from "../sidebar/sidebar";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { COMPONENT_TITLE } from "@/src/constant/titles";
+import Link from "next/link";
+import { ROUTE_URL } from "@/src/constant/url";
 
 const Header = (props) => {
     const { title } = props;
@@ -54,14 +56,14 @@ const Header = (props) => {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="javascript:void(0)">
+                                    <Link className="nav-link" href={ROUTE_URL.USER_PROFILE}>
                                         <Image
                                             src={UserImg}
                                             alt="User Profile"
                                             width="35"
                                             className="img-fluid"
                                         />
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

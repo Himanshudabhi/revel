@@ -63,11 +63,11 @@ const Login = () => {
                                         <input type="checkbox" className="custom-control-input" id="remember_me" name="example1" />
                                         <label className="custom-control-label" for="remember_me">Remember me</label>
                                     </div>
-                                    <a href="javascript:void(0)" className="d-block ml-auto">Forgot Password?</a>
+                                    <Link href={ROUTE_URL.FORGOT_PASSWORD} className="d-block ml-auto">Forgot Password?</Link>
                                 </div>
 
                                 {/* <a  className="btn btn-primary btn-block mt-4 mb-5"  >Login</a> */}
-                                <Link href={ROUTE_URL.DASHBOARD}
+                                <Link href={ROUTE_URL.ManageTenant}
                                     className="btn btn-primary btn-block mt-4 mb-5"
                                 >
                                     Login

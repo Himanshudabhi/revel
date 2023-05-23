@@ -53,7 +53,7 @@ const Sidebar = (props) => {
                     <li className="nav-item">
                         <Link
                             className="nav-link d-flex justify-content-between align-items-center"
-                            href="javascript:void(0)"
+                            href={ROUTE_URL.DASHBOARD}
                         >
                             <div>
                                 <Image
@@ -161,7 +161,7 @@ const Sidebar = (props) => {
                     <li className="nav-item">
                         <Link
                             className="nav-link d-flex justify-content-between align-items-center"
-                           href={ROUTE_URL.DATASET}
+                            href={ROUTE_URL.DATASET}
                         >
                             <div>
                                 <Image src={DatasetIcon} alt="Dataset" className="img-fluid" />
@@ -223,13 +223,13 @@ const Sidebar = (props) => {
                         <div id="dropdown" className={`collapse navbar-collapse has-dropdown ${add ? "show" : ""}`}>
                             <ul className="navbar-nav mr-auto ">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="javascript:void(0)">User</a>
+                                    <Link className="nav-link" href={ROUTE_URL.USER}>User</Link>
                                 </li>
-                                
+
                                 <li className="nav-item">
                                     <Link className="nav-link" href={ROUTE_URL.ROLE_MANAGEMENT}>Role</Link>
                                 </li>
-                                
+
                                 <li className="nav-item">
                                     <Link className="nav-link" href={ROUTE_URL.ManageTenant}>Tenet</Link>
                                 </li>

@@ -1,22 +1,14 @@
 import Image from "next/image";
 import { useState } from "react";
+import { Collapse } from "react-bootstrap";
 const AddRole = () => {
     const [add, setadd] = useState(false)
     const [ison, setison] = useState(false)
     const [istrue, setistrue] = useState(false)
 
-    const Clickhendal = () => {
-        setadd(!add);
-    }
+    const [open, setOpen] = useState(false);
 
-    const ClickButton = () => {
-        setison(!ison)
 
-    }
-    const onclickbutton = () => {
-        setistrue(!istrue)
-
-    }
 
     return (
         <>
@@ -73,161 +65,184 @@ const AddRole = () => {
                             </div>
                             <div class="accordions" id="accordion">
                                 <div class="collapse-item">
-                                    <div class={`collapse-header ${add === true ? "collapsed" : ""}`} data-target="#media" data-toggle="collapse" onClick={Clickhendal} aria-expanded="true">
+                                    {/* <div class={`collapse-header ${add === true ? "collapsed" : ""}`} data-target="#media" data-toggle="collapse" onClick={Clickhendal} aria-expanded="true"> */}
+                                    {/* <div class={`collapse-header ${add === true ? "collapsed" : ""}`} data-target="#media" data-toggle="collapse" onClick={Clickhendal} aria-expanded="true"> */}
+                                    <div className="collapse-header"
+                                        onClick={() => setOpen(!open)}
+                                        aria-controls="media"
+                                        aria-expanded={ open}
+                                    >
+
                                         <i class="fa fa-chevron-down mr-2"></i>
                                         Media
                                     </div>
-                                    <div id="media" class={`collapse ${add ? "show" : ""}`} data-parent="#accordion">
-                                        <div class="d-grid column-8">
-                                            <div>User Media</div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="1" checked />
-                                                    <label class="custom-control-label" for="1">&nbsp;</label>
+                                    <Collapse in={open}>
+                                        <div id="media" data-parent="#accordion">
+                                            <div class="d-grid column-8">
+                                                <div>User Media</div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="1" checked />
+                                                        <label class="custom-control-label" for="1">&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="2" />
+                                                        <label class="custom-control-label" for="2">&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="3" />
+                                                        <label class="custom-control-label" for="3">&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="4" />
+                                                        <label class="custom-control-label" for="4">&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="5" />
+                                                        <label class="custom-control-label" for="5">&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="6" />
+                                                        <label class="custom-control-label" for="6">&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="7" />
+                                                        <label class="custom-control-label" for="7">&nbsp;</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="2" />
-                                                    <label class="custom-control-label" for="2">&nbsp;</label>
+                                            <div class="d-grid column-8">
+                                                <div>User Media</div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted" >
+                                                        <input type="checkbox" class="custom-control-input" id="1" checked />
+                                                        <label class="custom-control-label" for="1">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="3" />
-                                                    <label class="custom-control-label" for="3">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="2" />
+                                                        <label class="custom-control-label" for="2">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="4" />
-                                                    <label class="custom-control-label" for="4">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="3" />
+                                                        <label class="custom-control-label" for="3">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="5" />
-                                                    <label class="custom-control-label" for="5">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="4" />
+                                                        <label class="custom-control-label" for="4">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="6" />
-                                                    <label class="custom-control-label" for="6">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="5" />
+                                                        <label class="custom-control-label" for="5">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="7" />
-                                                    <label class="custom-control-label" for="7">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="6" />
+                                                        <label class="custom-control-label" for="6">&nbsp;</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="7" />
+                                                        <label class="custom-control-label" for="7">&nbsp;</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-grid column-8">
-                                            <div>User Media</div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted" >
-                                                    <input type="checkbox" class="custom-control-input" id="1" checked />
-                                                    <label class="custom-control-label" for="1">&nbsp;</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="2" />
-                                                    <label class="custom-control-label" for="2">&nbsp;</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="3" />
-                                                    <label class="custom-control-label" for="3">&nbsp;</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="4" />
-                                                    <label class="custom-control-label" for="4">&nbsp;</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="5" />
-                                                    <label class="custom-control-label" for="5">&nbsp;</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="6" />
-                                                    <label class="custom-control-label" for="6">&nbsp;</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="7" />
-                                                    <label class="custom-control-label" for="7">&nbsp;</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </Collapse>
                                 </div>
                                 <div class="collapse-item">
-                                    <div class="collapse-header" data-target="#dashboard" data-toggle="collapse" onClick={ClickButton}>
+                                    {/* <div class="collapse-header" data-target="#dashboard" data-toggle="collapse" onClick={ClickButton}> */}
+                                    <div className="collapse-header"
+                                        onClick={() => setadd(!add)}
+                                        aria-controls="dashboard"
+                                        aria-expanded={add}
+                                    >
                                         <i class="fa fa-chevron-down mr-2"></i>
                                         My Dashboard
                                     </div>
-                                    <div id="dashboard" class={`collapse ${ison ? "show" : ""}`} data-parent="#accordion">
-                                        <div class="d-grid column-8">
-                                            <div>Dashboard</div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="1" checked />
-                                                    <label class="custom-control-label" for="1">&nbsp;</label>
+                                    <Collapse in={add}>
+                                        <div id="dashboard"  data-parent="#accordion">
+                                            <div class="d-grid column-8">
+                                                <div>Dashboard</div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="1" checked />
+                                                        <label class="custom-control-label" for="1">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="2" />
-                                                    <label class="custom-control-label" for="2">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="2" />
+                                                        <label class="custom-control-label" for="2">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="3" />
-                                                    <label class="custom-control-label" for="3">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="3" />
+                                                        <label class="custom-control-label" for="3">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="4" />
-                                                    <label class="custom-control-label" for="4">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="4" />
+                                                        <label class="custom-control-label" for="4">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="5" />
-                                                    <label class="custom-control-label" for="5">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="5" />
+                                                        <label class="custom-control-label" for="5">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="6" />
-                                                    <label class="custom-control-label" for="6">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="6" />
+                                                        <label class="custom-control-label" for="6">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="7" />
-                                                    <label class="custom-control-label" for="7">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="7" />
+                                                        <label class="custom-control-label" for="7">&nbsp;</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Collapse>
                                 </div>
                                 <div class="collapse-item">
-                                    <div class="collapse-header" data-target="#powerbi" data-toggle="collapse" onClick={onclickbutton}>
+                                    {/* <div class="collapse-header" data-target="#powerbi" data-toggle="collapse" > */}
+                                    <div className="collapse-header"
+                                        onClick={() => setison(!ison)}
+                                        aria-controls="powerbi"
+                                        aria-expanded={ison}
+                                    >
                                         <i class="fa fa-chevron-down mr-2"></i>
                                         Power BI
                                     </div>
+                                    <Collapse in={ison}>
+
                                     <div id="powerbi" class={`collapse ${istrue ? "show" : ""}`} data-parent="#accordion">
                                         <div class="d-grid column-8">
                                             <div>Power BI</div>
@@ -264,6 +279,7 @@ const AddRole = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    </Collapse>
                                 </div>
                             </div>
                         </div>

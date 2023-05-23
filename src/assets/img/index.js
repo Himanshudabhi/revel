@@ -2,3 +2,11 @@ export  {default as logowhiteimg} from "./logo-white.svg";
 export  {default as UserImg} from "./user-placeholder.png";
 export  {default as LogoImg} from "./logo.svg";
 export  {default as loginImg} from "./login-img.png";
+export  {default as DashboardImg} from "./dashboard.png";
+export  {default as SourceImg} from "./source.png";
+export  {default as DestinationImg} from "./destination.png";
+export  {default as PipelinesImg} from "./pipelines.png";
+export  {default as DatasetImg} from "./dataset.png";
+export  {default as AnalyticsImg} from "./analytics.png";
+export  {default as ConfigurationImg} from "./configuration.png";
+export  {default as UserProfileImg} from "./user-profile.png"

@@ -7,6 +7,8 @@ import logo from '../../assets/img/logo.svg'
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { BUTTON_LABEL } from "@/src/constant/labels"
+import Link from "next/link"
+import { ROUTE_URL } from "@/src/constant/url"
 
 const data = [{
     "id": 1,
@@ -254,52 +256,59 @@ const ManageTenants = (props) => {
                                             data.slice(0, visibal).map((ins, index) => {
                                                 return (<>
                                                     <div className="col-12 col-md-3 mb-4 ">
-                                                        <div className="card text text-center mb-0">
-                                                            <div className="icon">
-                                                                <Image src={ins.img} alt="Revel" className="img-fluid mx-auto"
-                                                                    width="140" height="100" />
+                                                        <Link href={ROUTE_URL.DASHBOARD}>
+                                                            <div className="card text text-center mb-0">
+                                                                <div className="icon">
+                                                                    <Image src={ins.img} alt="Revel" className="img-fluid mx-auto"
+                                                                        width="140" height="100" />
+                                                                </div>
+                                                                {/* Revel */}
+                                                                {ins.name}
+                                                                {title}
+                                                                <div className="actions">
+                                                                    <ul className="list-unstyled d-flex flex-row mb-0 justify-content-center">
+                                                                        <li>
+                                                                            <a href="javascript:void(0)">
+                                                                                <i className="r-icon r-icon-info-outline"></i>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="javascript:void(0)">
+                                                                                <i className="r-icon r-icon-pencil"></i>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="javascript:void(0)" className="text-danger">
+                                                                                <i className="r-icon r-icon-delete"></i>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
-                                                            {/* Revel */}
-                                                            {ins.name}
-                                                            {title}
-                                                            <div className="actions">
-                                                                <ul className="list-unstyled d-flex flex-row mb-0 justify-content-center">
-                                                                    <li>
-                                                                        <a href="javascript:void(0)">
-                                                                            <i className="r-icon r-icon-info-outline"></i>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="javascript:void(0)">
-                                                                            <i className="r-icon r-icon-pencil"></i>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="javascript:void(0)" className="text-danger">
-                                                                            <i className="r-icon r-icon-delete"></i>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
+                                                        </Link>
                                                     </div>
                                                 </>)
                                             })
                                         }
                                         <div className="col-12 col-md-3">
-                                            <label for="logo" className="upload-box card">
-                                                <div className="inner-content">
-                                                    <div className="icon-box">
-                                                        <i className="r-icon r-icon-plus"></i>
+                                            <Link href={ROUTE_URL.ADD_TENANT}>
+                                                <label for="logo" className="upload-box card">
+
+                                                    <div className="inner-content">
+                                                        <div className="icon-box">
+                                                            <i className="r-icon r-icon-plus"></i>
+                                                        </div>
+                                                        <span>
+                                                            Add Tenant
+
+                                                        </span>
                                                     </div>
-                                                    <span>
-                                                        Add Tenant
-                                                    </span>
-                                                </div>
-                                            </label>
+
+                                                </label>
+                                            </Link>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="text-center my-4">
                                         {/* <a href="javascript:void(0)" className="btn btn-primary btn-lg min-width-150">{BUTTON_LABEL.SAVE}</a> */}
                                         <button className="btn btn-success " onClick={showmoreitem}>Lode More</button>
