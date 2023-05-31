@@ -27,7 +27,7 @@ const RoleManagement = () => {
                                     <div class="buttons mt-3">
                                         <Link href={ROUTE_URL.ADD_MANAGEMENT_USER} class="btn mr-2 btn-primary">
                                             <Image src={PlusIcon} alt="Add" />
-                                            Add User
+                                            Add Role
                                         </Link>
                                     </div>
                                 </div>
@@ -35,9 +35,9 @@ const RoleManagement = () => {
                         </div>
                         <div class="row px-2 align-items-center">
                             <div class="col-12 col-md-6">
-                                <p class="text-muted">
+                                {/* <p class="text-muted">
                                     Filtered to 2 people of 2
-                                </p>
+                                </p> */}
                             </div>
                             <div class="col-12 col-md-6 text-right d-flex">
                                 <a href="javascript:void(0)" class="btn btn-outline-light mr-2 ml-auto">10 COLUMNS SELECTED OF
@@ -204,7 +204,7 @@ const RoleManagement = () => {
                     </div>
                 </main>
             </div>
-            
+
         </>
     )
 }

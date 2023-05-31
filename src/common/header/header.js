@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { COMPONENT_TITLE } from "@/src/constant/titles";
 import Link from "next/link";
 import { ROUTE_URL } from "@/src/constant/url";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Header = (props) => {
     const { title } = props;
@@ -80,9 +81,17 @@ const Header = (props) => {
                             >
                                 <Image src={BarsImg} alt="Toggle Sidebar" className="img-fluid" />
                             </a>
-
+                            {/* <Breadcrumb bg="white"> */}
                             <li className="breadcrumb-item">{title}</li>
                             <li className="breadcrumb-item active">{COMPONENT_TITLE[router.pathname]}</li>
+                            {/* </Breadcrumb> */}
+                            {/* 
+                                <Breadcrumb.Item href="#">{title}</Breadcrumb.Item>
+                                <Breadcrumb.Item href="#">
+                                {COMPONENT_TITLE[router.pathname]}
+                                </Breadcrumb.Item>
+                                
+                            </Breadcrumb> */}
                         </ol>
                     </div>
                 </nav>

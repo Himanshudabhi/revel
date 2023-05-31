@@ -1,6 +1,8 @@
 import { CsvFileIcon, MySqlIcone, MOngoDbIcone, PlusIcon, cancelIcon } from "@/src/assets/img/icons"
 import CoustomModal from "@/src/common/custommodal";
+import { ROUTE_URL } from "@/src/constant/url";
 import Image from "next/image"
+import Link from "next/link";
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -567,7 +569,7 @@ const DataSet = () => {
                 <div className="col-12">
                     <div className="d-flex justify-content-end">
                         <a href="javascript:void(0)" className="sidebar-toggler close-sidebar" onClick={ToggleClick}>
-                            <Image src={cancelIcon} alt="Back" className="img-fluid" width="15" style={{ filter: " grayscale(1);" }} />
+                            <Image src={cancelIcon} alt="Back" className="img-fluid" width="15" style={{ filter: "grayscale(1)" }} />
                         </a>
                     </div>
                     <div className="text-center  py-5 position-relative">
@@ -600,8 +602,8 @@ const DataSet = () => {
                                 <input type="text" className="form-control p-10-15" id="pipeline1" />
                                 <label for="pipeline1">Pipeline Name</label>
                                 <small className="mt-1 d-inline-block text-grey font-10">A unique name for your
-                                    Pipe 
-line</small>
+                                    Pipe
+                                    line</small>
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
@@ -715,7 +717,7 @@ line</small>
                     <div className="d-flex justify-content-center my-3">
                         <a href="javascript:void(0)" className="btn-lg btn btn-muted btn-default mr-2">TEST
                             CONNECTION</a>
-                        <a href="javascript:void(0)" className="btn-lg btn  btn-primary">TEST &amp; CONTINUE</a>
+                        <Link href={ROUTE_URL.DATASET} className="btn-lg btn  btn-primary">TEST &amp; CONTINUE</Link>
                     </div>
                 </div>
             </div>

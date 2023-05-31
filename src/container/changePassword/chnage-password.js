@@ -1,6 +1,6 @@
 import { ROUTE_URL } from "@/src/constant/url";
 import Link from "next/link";
-const ForgotPassword = () => {
+const ChangePassword = () => {
   return (
     <>
       <main class="main-content" id="main">
@@ -21,7 +21,7 @@ const ForgotPassword = () => {
 
               <div class="text-center my-2">
                 <a href="javascript:void(0)" class="btn btn-muted mr-2" data-dismiss="modal">Cancel</a>
-                <a href="javascript:void(0)" class="btn btn-primary" data-dismiss="modal">Save</a>
+                <Link href={ROUTE_URL.HOME} class="btn btn-primary" data-dismiss="modal">Save</Link>
               </div>
 
 
@@ -32,4 +32,4 @@ const ForgotPassword = () => {
     </>
   );
 };
-export default ForgotPassword;
+export default ChangePassword;

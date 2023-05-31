@@ -154,7 +154,7 @@ const UserProfile = () => {
                         CANCEL
                       </Link>
                       <Link
-                        href="javascript:void(0)"
+                        href={ROUTE_URL.DASHBOARD}
                         className="btn-lg btn  btn-primary min-width-150"
                       >
                         SAVE

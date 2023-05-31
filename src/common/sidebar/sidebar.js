@@ -29,7 +29,7 @@ const Sidebar = (props) => {
                     <li className="nav-item">
                         <Link
                             className="nav-link active d-flex justify-content-between align-items-center"
-                            href={ROUTE_URL.DASHBOARD}
+                            href={ROUTE_URL.ManageTenant}
                         >
                             <div>
                                 <Image src={HomeIcon} alt="Home" className="img-fluid" />
@@ -231,7 +231,7 @@ const Sidebar = (props) => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link" href={ROUTE_URL.ManageTenant}>Tenet</Link>
+                                    <Link className="nav-link" href={ROUTE_URL.ManageTenant}>Tenant</Link>
                                 </li>
                             </ul>
                         </div>

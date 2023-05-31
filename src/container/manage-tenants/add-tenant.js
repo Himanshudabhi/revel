@@ -1,3 +1,4 @@
+import { ROUTE_URL } from "@/src/constant/url";
 import Link from "next/link";
 import { useState } from "react";
 const AddTenant = () => {
@@ -137,7 +138,7 @@ const AddTenant = () => {
                               </div>
                             </div>
                             <div className="text-center my-3">
-                            
+
                               <Link
                                 className={` btn btn-primary  ${activetab === "tab-p_2" ? "active" : ""} `}
                                 data-toggle="tab"
@@ -265,7 +266,7 @@ const AddTenant = () => {
                           </div>
                           <div className="text-center my-4">
                             <Link
-                              href="javascript:void(0)"
+                              href={ROUTE_URL.ManageTenant}
                               className="btn btn-primary btn-lg min-width-150"
                             >
                               Submit

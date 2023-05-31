@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { DownloadIcon, PlusIcon, ImportIcon } from "@/src/assets/img/icons";
+import { DownloadIcon, PlusIcon, ImportIcon, cancelIcon } from "@/src/assets/img/icons";
 import UserForm from "./userForm";
-import { Button,Modal } from "react-bootstrap";
-import { useState  } from "react";
+import { Button, Modal } from "react-bootstrap";
+import { useState } from "react";
 const User = () => {
     const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <>
             <div class="wrapper">
@@ -261,16 +261,19 @@ const User = () => {
             </div>
 
             <Modal size="lg" show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Header >
+                    <Modal.Title>Add User</Modal.Title>
+                    <Image src={cancelIcon} alt="Back" class="img-fluid" width="15"
+                        style={{ filter: "grayscale(1)" }} onClick={handleClose} />
                 </Modal.Header>
-                <Modal.Body><UserForm/></Modal.Body>
+                <Modal.Body><UserForm /></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
                     <Button variant="primary" onClick={handleClose}>
-                        Save Changes
+                        Save
+
                     </Button>
                 </Modal.Footer>
             </Modal>

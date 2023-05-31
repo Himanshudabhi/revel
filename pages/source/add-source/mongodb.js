@@ -1,10 +1,13 @@
+import PageHeader from "@/src/config/PageHeader"
+import { HEADER_TITLE } from "@/src/constant/titles"
 import Mongodb from "@/src/container/Source/mongodb"
 
-const MongodbPage = ()=>{
-    return(
+const MongodbPage = () => {
+    return (
         <>
-        <Mongodb/>
-        
+            <PageHeader title={HEADER_TITLE.MONGO_DB} />
+            <Mongodb />
+
         </>
     )
 }

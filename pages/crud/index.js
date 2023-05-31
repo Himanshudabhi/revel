@@ -4,7 +4,6 @@ import { useState } from "react";
 import Head from "next/head";
 
 const GET_API = "https://www.melivecode.com/api/users";
-const CREATE_API = "https://www.melivecode.com/api/users/create";
 const Crud = () => {
 
     const [api, setapi] = useState([])

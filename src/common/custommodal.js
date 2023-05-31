@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-const CoustomModal = ({onClick,show,handleClose,ModalTitle}) => {
+const CoustomModal = ({ onClick, show, handleClose, ModalTitle }) => {
     // const [show, setShow] = useState(false);
 
     // const handleClose = () => setShow(false);

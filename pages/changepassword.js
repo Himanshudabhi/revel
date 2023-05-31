@@ -1,15 +1,17 @@
 import Header from "@/src/common/header/header";
 import PageHeader from "@/src/config/PageHeader";
 import { HEADER_TITLE, NAVBAR_TITLE } from "@/src/constant/titles";
-import AddSource from "@/src/container/Source/add-source";
+import ChangePassword from "@/src/container/changePassword/chnage-password";
 
-const AddSourcePage = () => {
+
+const ForgotPasswordPage = () => {
     return (
         <>
-            <PageHeader title={HEADER_TITLE.ADD_SOURCE} />
+            <PageHeader title={HEADER_TITLE.CHANGE_PASSWORD} />
             <Header title={NAVBAR_TITLE.HOME} />
-            <AddSource />
+            <ChangePassword />
+
         </>
     )
 }
-export default AddSourcePage;
+export default ForgotPasswordPage;

@@ -239,6 +239,7 @@ const ManageTenants = (props) => {
     }
     return (
         <>
+        <div className="wrapper">
             <main className="main-content" id="main">
                 <div className="container">
                     <div className="row">
@@ -256,8 +257,9 @@ const ManageTenants = (props) => {
                                             data.slice(0, visibal).map((ins, index) => {
                                                 return (<>
                                                     <div className="col-12 col-md-3 mb-4 ">
-                                                        <Link href={ROUTE_URL.DASHBOARD}>
-                                                            <div className="card text text-center mb-0">
+
+                                                        <div className="card text text-center mb-0">
+                                                            <Link href={ROUTE_URL.DASHBOARD}>
                                                                 <div className="icon">
                                                                     <Image src={ins.img} alt="Revel" className="img-fluid mx-auto"
                                                                         width="140" height="100" />
@@ -265,27 +267,28 @@ const ManageTenants = (props) => {
                                                                 {/* Revel */}
                                                                 {ins.name}
                                                                 {title}
-                                                                <div className="actions">
-                                                                    <ul className="list-unstyled d-flex flex-row mb-0 justify-content-center">
-                                                                        <li>
-                                                                            <a href="javascript:void(0)">
-                                                                                <i className="r-icon r-icon-info-outline"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="javascript:void(0)">
-                                                                                <i className="r-icon r-icon-pencil"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="javascript:void(0)" className="text-danger">
-                                                                                <i className="r-icon r-icon-delete"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
+                                                            </Link>
+                                                            <div className="actions">
+                                                                <ul className="list-unstyled d-flex flex-row mb-0 justify-content-center">
+                                                                    <li>
+                                                                        <a href="javascript:void(0)">
+                                                                            <i className="r-icon r-icon-info-outline"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)">
+                                                                            <i className="r-icon r-icon-pencil"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" className="text-danger">
+                                                                            <i className="r-icon r-icon-delete"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
-                                                        </Link>
+                                                        </div>
+
                                                     </div>
                                                 </>)
                                             })
@@ -311,7 +314,7 @@ const ManageTenants = (props) => {
 
                                     <div className="text-center my-4">
                                         {/* <a href="javascript:void(0)" className="btn btn-primary btn-lg min-width-150">{BUTTON_LABEL.SAVE}</a> */}
-                                        <button className="btn btn-success " onClick={showmoreitem}>Lode More</button>
+                                        <button className="btn btn-success " onClick={showmoreitem}>load More</button>
                                     </div>
                                 </div>
                             </div>
@@ -319,6 +322,7 @@ const ManageTenants = (props) => {
                     </div>
                 </div>
             </main>
+            </div>
         </>
     )
 }

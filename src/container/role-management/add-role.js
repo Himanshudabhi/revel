@@ -1,4 +1,6 @@
+import { ROUTE_URL } from "@/src/constant/url";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Collapse } from "react-bootstrap";
 const AddRole = () => {
@@ -70,7 +72,7 @@ const AddRole = () => {
                                     <div className="collapse-header"
                                         onClick={() => setOpen(!open)}
                                         aria-controls="media"
-                                        aria-expanded={ open}
+                                        aria-expanded={open}
                                     >
 
                                         <i class="fa fa-chevron-down mr-2"></i>
@@ -182,7 +184,7 @@ const AddRole = () => {
                                         My Dashboard
                                     </div>
                                     <Collapse in={add}>
-                                        <div id="dashboard"  data-parent="#accordion">
+                                        <div id="dashboard" data-parent="#accordion">
                                             <div class="d-grid column-8">
                                                 <div>Dashboard</div>
                                                 <div>
@@ -243,42 +245,42 @@ const AddRole = () => {
                                     </div>
                                     <Collapse in={ison}>
 
-                                    <div id="powerbi" class={`collapse ${istrue ? "show" : ""}`} data-parent="#accordion">
-                                        <div class="d-grid column-8">
-                                            <div>Power BI</div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="1" checked />
-                                                    <label class="custom-control-label" for="1">&nbsp;</label>
+                                        <div id="powerbi" class={`collapse ${istrue ? "show" : ""}`} data-parent="#accordion">
+                                            <div class="d-grid column-8">
+                                                <div>Power BI</div>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="1" checked />
+                                                        <label class="custom-control-label" for="1">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="2" />
-                                                    <input type="checkbox" class="custom-control-input" id="4" />
-                                                    <label class="custom-control-label" for="4">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="2" />
+                                                        <input type="checkbox" class="custom-control-input" id="4" />
+                                                        <label class="custom-control-label" for="4">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="5" />
-                                                    <label class="custom-control-label" for="5">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="5" />
+                                                        <label class="custom-control-label" for="5">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="6" />
-                                                    <label class="custom-control-label" for="6">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="6" />
+                                                        <label class="custom-control-label" for="6">&nbsp;</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="custom-control custom-checkbox text-muted">
-                                                    <input type="checkbox" class="custom-control-input" id="7" />
-                                                    <label class="custom-control-label" for="7">&nbsp;</label>
+                                                <div>
+                                                    <div class="custom-control custom-checkbox text-muted">
+                                                        <input type="checkbox" class="custom-control-input" id="7" />
+                                                        <label class="custom-control-label" for="7">&nbsp;</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                     </Collapse>
                                 </div>
                             </div>
@@ -287,8 +289,8 @@ const AddRole = () => {
                     <div class="row px-2">
                         <div class="col-12">
                             <div class="d-flex justify-content-center my-3">
-                                <a href="javascript:void(0)" class="btn-lg btn btn-muted btn-default mr-2 min-width-150">CANCEL</a>
-                                <a href="javascript:void(0)" class="btn-lg btn  btn-primary min-width-150">SAVE</a>
+                                <Link href={ROUTE_URL.ROLE_MANAGEMENT} class="btn-lg btn btn-muted btn-default mr-2 min-width-150">CANCEL</Link>
+                                <Link href={ROUTE_URL.ROLE_MANAGEMENT} class="btn-lg btn  btn-primary min-width-150">SAVE</Link>
                             </div>
                         </div>
                     </div>

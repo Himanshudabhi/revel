@@ -7,7 +7,7 @@ const ManageTenantPage = () => {
     return (
         <>
             <PageHeader title={HEADER_TITLE.TENANT} />
-            <Header title={NAVBAR_TITLE.TENANT} />
+            <Header title={NAVBAR_TITLE.HOME} />
             <ManageTenants />
         </>
     )

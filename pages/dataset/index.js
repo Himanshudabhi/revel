@@ -3,13 +3,13 @@ import PageHeader from "@/src/config/PageHeader"
 import { HEADER_TITLE, NAVBAR_TITLE } from "@/src/constant/titles"
 import DataSet from "@/src/container/dataset/dataset"
 
-const DataSetIndexPage = ()=>{
-    return(
+const DataSetIndexPage = () => {
+    return (
         <>
-        <PageHeader title={HEADER_TITLE.DATASET}/>
-        <Header title={NAVBAR_TITLE.DATASET}/>
-        <DataSet/>
-        
+            <PageHeader title={HEADER_TITLE.DATASET} />
+            <Header title={NAVBAR_TITLE.DATASET} />
+            <DataSet />
+
         </>
     )
 }
