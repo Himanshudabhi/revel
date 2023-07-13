@@ -29,7 +29,7 @@ const Sidebar = (props) => {
                     <li className="nav-item">
                         <Link
                             className="nav-link active d-flex justify-content-between align-items-center"
-                            href={ROUTE_URL.ManageTenant}
+                            href={ROUTE_URL.MANAGE_TENANT}
                         >
                             <div>
                                 <Image src={HomeIcon} alt="Home" className="img-fluid" />
@@ -105,7 +105,7 @@ const Sidebar = (props) => {
                     <li className="nav-item">
                         <Link
                             className="nav-link d-flex justify-content-between align-items-center"
-                            href="javascript:void(0)"
+                            href="#"
                         >
                             <div>
                                 <Image
@@ -133,7 +133,7 @@ const Sidebar = (props) => {
                     <li className="nav-item">
                         <Link
                             className="nav-link d-flex justify-content-between align-items-center"
-                            href="javascript:void(0)"
+                            href="#"
                         >
                             <div>
                                 <Image
@@ -185,7 +185,7 @@ const Sidebar = (props) => {
                     <li className="nav-item">
                         <Link
                             className="nav-link d-flex justify-content-between align-items-center"
-                            href="javascript:void(0)"
+                            href="#"
                         >
                             <div>
                                 <Image
@@ -211,7 +211,7 @@ const Sidebar = (props) => {
                         </Link>
                     </li>
                     <li className="nav-item" >
-                        <a className="nav-link d-flex justify-content-between align-items-center " href="javascript:void(0)" data-toggle="collapse" data-target="#dropdown" onClick={showToggl}>
+                        <a className="nav-link d-flex justify-content-between align-items-center " href="#" data-toggle="collapse" data-target="#dropdown" onClick={showToggl}>
                             <div >
                                 <Image src={ConfigurationIcon} alt="Configuration" className="img-fluid" />
                                 <span >Configuration</span>
@@ -231,7 +231,7 @@ const Sidebar = (props) => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link" href={ROUTE_URL.ManageTenant}>Tenant</Link>
+                                    <Link className="nav-link" href={ROUTE_URL.MANAGE_TENANT}>Tenant</Link>
                                 </li>
                             </ul>
                         </div>
@@ -240,7 +240,7 @@ const Sidebar = (props) => {
                 <ul className="navbar-nav navbar-nav-bottom">
                     <li className="nav-item">
                         <Link
-                            href="javascript:void(0)"
+                            href="#"
                             className="btn btn-primary btn-block"
                         >
                             <i className="fa fa-plus mr-2"></i> Add integrations

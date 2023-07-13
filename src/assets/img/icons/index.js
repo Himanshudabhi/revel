@@ -22,3 +22,5 @@ export {default as DownloadIcon} from './download.svg';
 export {default as ImportIcon} from './import.svg';
 export {default as BackArrowIcon} from './back-arrow.svg';
 export {default as RefreshIcon} from './refresh.svg';
+export {default as ElasticSearchIcon} from './elasticsearch.svg';
+export {default as CassandraIcon} from './cassandra.svg';

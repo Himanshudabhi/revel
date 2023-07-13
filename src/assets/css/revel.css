@@ -125,6 +125,15 @@ body {
     left: 15px;
 }
 
+.form-group.label-inside .icon-box-eye1 {
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+}
+
+
+
+
 .login-form .form-control:focus+label {
     top: -10px;
     left: 30px;
@@ -259,7 +268,7 @@ a {
     padding-top: 90px;
     background-color: #EFFAFF;
     width: 250px;
-    z-index: 998;
+    z-index: 99;
     box-shadow: 5px 5px 10px rgb(0 0 0 / 35%);
     transition: all .4s ease-in-out;
 }
@@ -270,6 +279,7 @@ a {
 
 .main-content {
     margin-top: 90px;
+    height: 90vh;
 }
 
 .brand-sidebar .nav-link {
@@ -974,6 +984,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .tenants .card.upload-box {
     border-style: dashed !important;
+    height:218px;
     border-color: #C2C2C2 !important;
 }
 
@@ -1391,9 +1402,10 @@ input[type="number"]::-webkit-inner-spin-button {
   }
   
   .input:not(:placeholder-shown).input:not(:focus) + .placeholder {
-    transform: scale(.75) translateY(-36px) translateX(-15%);
-    color: #CBD8E3;
+    transform: scale(.75) translateY(-30px) translateX(-15%);
+    color: #000000;
     transition: .2s ease;
+    font-weight: 500;
   }
   
   .input:focus {
@@ -1402,7 +1414,7 @@ input[type="number"]::-webkit-inner-spin-button {
   } 
   
   .input:focus + .placeholder {
-    transform: scale(.75) translateY(-36px) translateX(-15%);
+    transform: scale(.75) translateY(-30px) translateX(-15%);
     color: #0088ff;
     transition: .2s ease;
   } 
@@ -1415,13 +1427,16 @@ input[type="number"]::-webkit-inner-spin-button {
   .input:invalid:not(:placeholder-shown) + .placeholder{
     transition: .2s ease;
     color:#F52C5C;
+    font-weight: 500;
   }
   .input:invalid:not(:placeholder-shown).input:not(:focus) + .placeholder {
-    transform: scale(.75) translateY(-36px) translateX(-15%);
+    transform: scale(.75) translateY(-30px) translateX(-15%);
     color: #F52C5C;
     transition: .2s ease;
     top: 15px;
+    font-weight: 500;
   }
+
 
 
 
@@ -1432,6 +1447,99 @@ input[type="number"]::-webkit-inner-spin-button {
 /* ===============================Input without JS===================================== */
 
 
+
+
+
+
+table thead th span{
+    position: relative;
+    right: 60px;
+}
+
+
+.dropdown-slide.show .dropdown-menu.show {
+    display: block;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+.app-header .navbar-nav .dropdown-menu-accout {
+    right: -25px;
+}
+.app-header .navbar-nav .dropdown-menu-right {
+    right: -12px;
+    left: auto;
+}
+.app-header .navbar-nav .dropdown-menu {
+    min-width: 300px;
+    margin: 1.5rem 0 0;
+    border: none;
+    box-shadow: 0 10px 70px 0 rgba(108,158,195,.25);
+}
+.dropdown-slide .dropdown-menu {
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    -webkit-transition: visibility .2s,opacity .2s,-webkit-transform 500ms cubic-bezier(.43,.26,.11,.99);
+    transition: visibility .2s,opacity .2s,transform 500ms cubic-bezier(.43,.26,.11,.99);
+    transition: visibility .2s,opacity .2s,transform 500ms cubic-bezier(.43,.26,.11,.99),-webkit-transform 500ms cubic-bezier(.43,.26,.11,.99);
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+
+.app-header .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 10px 1.5rem;
+    color: #3c4b6c;
+    font-size: 14px;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
+}
+
+.app-header .navbar-nav .dropdown-menu .dropdown-header {
+    margin-bottom: 8px;
+    color: #45567c;
+    border-bottom: 1px solid #e5e9ec;
+    font-size: 15px;
+}
+
+.app-header .navbar-nav .dropdown-menu:after {
+    position: absolute;
+    top: -12px;
+    right: 30px;
+    clear: both;
+    width: 0;
+    height: 0;
+    content: "";
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+    border-left: 12px solid transparent;
+}
+
+
+.menu-b-navbar {
+    background-color: var(--primary-color);
+    padding: 0px;
+    z-index: 995;
+    position: fixed;
+    top: 55px;
+    left: 0px;
+    right: 0px;
+}
 
 
 

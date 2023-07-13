@@ -20,7 +20,7 @@ const ChangePassword = () => {
               </div>
 
               <div class="text-center my-2">
-                <a href="javascript:void(0)" class="btn btn-muted mr-2" data-dismiss="modal">Cancel</a>
+                <a href="#" class="btn btn-muted mr-2" data-dismiss="modal">Cancel</a>
                 <Link href={ROUTE_URL.HOME} class="btn btn-primary" data-dismiss="modal">Save</Link>
               </div>
 

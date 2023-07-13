@@ -14,7 +14,7 @@ const UserProfile = () => {
                 <div className="d-flex justify-content-lg-end justify-content-center">
                   <div className="buttons my-2">
                     <Link
-                      href="javascript:void(0)"
+                      href="#"
                       className="btn mr-2 btn-outline-light"
                     >
                       <Image src={RefreshIcon} alt="Refresh" />
@@ -148,7 +148,7 @@ const UserProfile = () => {
                   <div className="col-12">
                     <div className="d-flex justify-content-center my-3">
                       <Link
-                        href="javascript:void(0)"
+                        href="#"
                         className="btn-lg btn btn-muted btn-default mr-2 min-width-150"
                       >
                         CANCEL
